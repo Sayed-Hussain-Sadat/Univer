@@ -1,0 +1,154 @@
+<web-app>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<context-param>
+		<param-name>driver</param-name>
+		<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+	</context-param>
+	<context-param>
+		<param-name>url</param-name>
+		<param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
+	</context-param>
+	<context-param>
+		<param-name>user</param-name>
+		<param-value>system</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pass</param-name>
+		<param-value>1234</param-value>
+	</context-param>
+	
+	<servlet>
+		<servlet-name>harvard</servlet-name>
+		<servlet-class>edu.harvard.login.HarvardLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>harvard</servlet-name>
+		<url-pattern>/harv</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>second</servlet-name>
+		<servlet-class>edu.error.demo.SecondServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>second</servlet-name>
+	<url-pattern>/sec</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>third</servlet-name>
+		<servlet-class>edu.notvalid.demo.ThirdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>third</servlet-name>
+	<url-pattern>/trd</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>attend</servlet-name>
+		<jsp-file>/WEB-INF/attendance.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>attend</servlet-name>
+		<url-pattern>/MyAttendant</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>addSub</servlet-name>
+		<jsp-file>/WEB-INF/addSubject.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addSub</servlet-name>
+		<url-pattern>/addSubComp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>addUs</servlet-name>
+		<jsp-file>/WEB-INF/addUser.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addUs</servlet-name>
+		<url-pattern>/addUserComp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>addFee</servlet-name>
+		<jsp-file>/WEB-INF/addFee.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addFee</servlet-name>
+		<url-pattern>/addFeeComp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>chngPass</servlet-name>
+		<jsp-file>/WEB-INF/changePassword.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>chngPass</servlet-name>
+		<url-pattern>/changPassword</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>myProf</servlet-name>
+		<jsp-file>/WEB-INF/myProfile.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myProf</servlet-name>
+		<url-pattern>/myProfile</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet>
+		<servlet-name>stdobj</servlet-name>
+		<jsp-file>/WEB-INF/studentDetails.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+			<servlet-name>stdobj</servlet-name>
+			<url-pattern>/std</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>attendent</servlet-name>
+		<jsp-file>/WEB-INF/attendanceDetails.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+			<servlet-name>attendent</servlet-name>
+			<url-pattern>/att</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>resobj</servlet-name>
+		<jsp-file>/WEB-INF/resultDetails.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+			<servlet-name>resobj</servlet-name>
+			<url-pattern>/result</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>feeobj</servlet-name>
+		<jsp-file>/WEB-INF/feeDetails.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+			<servlet-name>feeobj</servlet-name>
+			<url-pattern>/fee</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>tchAttend</servlet-name>
+		<jsp-file>/WEB-INF/teacherAddAttendance.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tchAttend</servlet-name>
+		<url-pattern>/tchAttendance</url-pattern>
+	</servlet-mapping>
+</web-app>
