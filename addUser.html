@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href ="css/bootstrap.min.css" rel ="stylesheet">
+		<script src ="js/jquery.min.js"></script>
+		<script src ="js/popper.min.js"></script>
+		<script src ="js/bootstrap.min.js"></script>
+		<title>Add User Page</title>
+		<style>
+			.par
+			{
+				position:absolute;
+				top:0;
+				bottom:0;
+				left:0;
+				right:0;
+				background-image:url('images/harvard/har1.jpg');
+				background-color:rgb(200,200,120,0.999);
+				background-blend-mode:overlay;				
+				
+			}
+			
+		</style>
+		<script>
+			function resetFun()
+			{
+				document.getElementById("myForm").reset();
+			}
+		</script>
+	</head>
+	<body>
+		<div class ="par" >
+			<ul class ="nav nav-tabs nav-justified bg-warning">
+				<li class ="flex-grow-1">
+					<img src ="images/log.png" width ="300" height ="40">
+				</li>
+				<li class ="nav-item">
+					<a href ="adminstrator.html" class ="nav-link">Home</a>
+				</li>
+				<li class ="nav-item dropdown">
+					<a href ="#" class ="nav-link dropdown-toggle" data-toggle ="dropdown">Administration</a>
+					<div class ="dropdown-menu">
+						<a href ="attendance.html" class ="dropdown-item">Add Attendance</a>
+						<a href ="addSubject.html" class ="dropdown-item">Add Subject</a>
+						<a href ="#" class ="dropdown-item">Add User</a>
+						<a href ="feeDetails.html" class ="dropdown-item">Add Fee</a>
+					</div>
+				</li>
+				<li class ="nav-item dropdown">
+					<a href ="#" class ="nav-link dropdown-toggle" data-toggle ="dropdown">Details</a>
+					<div class ="dropdown-menu">
+						<a href ="std" class ="dropdown-item">Student Details</a>
+						<a href ="att" class ="dropdown-item">Attendance Details</a>
+						<a href ="#" class ="dropdown-item">Subject Details</a>
+						<a href ="result" class ="dropdown-item">Result Details</a>
+						<a href ="fee" class ="dropdown-item">Fee Details</a>
+					</div>
+				</li>
+				<li class ="nav-item dropdown">
+					<a href ="#" class ="nav-link dropdown-toggle" data-toggle ="dropdown">My Account</a>
+					<div class ="dropdown-menu">
+						<a href ="myProfile.html" class ="dropdown-item">My Profile</a>
+						<a href ="chengPassword.html" class ="dropdown-item">Change Password</a>
+					</div>
+				</li>
+				<li class ="nav-item">
+					<a href ="index.html" class ="nav-link">Log Out</a>
+				</li>
+			</ul>
+			<div style ="width:100%;height:50px;background-color:black">
+				<h4 class ="text-light" style ="padding-left:6.5%;padding-top:0.5%">Add User :</h4>
+			</div>
+			
+			<div class ="container">
+				<div class ="row" style ="margin-left:3%;padding-top:2%;">
+					<div class ="float-left" style ="width:45%;">
+						<form action ="addUserComp" method ="POST" id ="myForm">
+							<div class ="form-group">
+								<b><label for ="sur">Select User Role :</label></b>
+								<select name ="SURoletxt" class ="form-control">
+									<option value ="manager">Manager</option>
+									<option value ="teacher">Teacher</option>
+									<option value ="student">Student</option>
+								</select>
+							</div>
+							<div class ="form-group">
+								<b><label for ="lid">Login ID :</label></b>
+								<input type ="text" class ="form-control" name ="logIDtxt" id ="lid">
+							</div>
+							<div class ="form-group">
+								<b><label for ="fnm">First Name :</label></b>
+								<input type ="text" class ="form-control" name ="fnametxt" id ="fnm" />
+							</div>
+							<div class ="form-group">
+								<b><label for ="lnm">Last Name :</label></b>
+								<input type ="text" class ="form-control" name ="lnametxt" id ="lnm" />
+							</div>
+							<div class ="form-group">
+								<b><label for ="dofb">Date Of Birth :</label></b>
+								<input type ="date" class ="form-control" name ="DOBirthtxt" id ="dofb" />
+							</div>	
+					</div>
+					<div class ="float-right" style ="width:45%;margin-left:2%">
+							<div class ="form-group">
+								<b><label for ="gen">Gender :</label></b>
+								<select name ="gendertxt" class ="form-control" id ="gen">
+									<option value ="male">Male</option>
+									<option value ="female">Female</option>
+									<option value ="other">Other</option>
+								</select>
+							</div>
+							<div class ="form-group">
+								<strong><label for ="pnm">Phone Number :</label></strong>
+								<input type ="text" class ="form-control" name ="phonetxt" id ="pnm" />
+							</div>
+							<div class ="form-group">
+								<strong><label for ="pas">Password :</label></strong>
+								<input type ="text" class ="form-control" name ="passwordtxt" id ="pas" />
+							</div>
+							<div class ="form-group">
+								<strong><label for ="cpas">Confirm Password :</label></strong>
+								<input type ="text" class ="form-control" name ="Conpasswordtxt" id ="cpas" />
+							</div>
+							<div style ="padding-top:7%">
+								<button type ="submit" class ="btn btn-primary btn-block">Save</button>
+							</div>
+						</form>
+						<button type ="button" onclick ="resetFun()" class ="btn btn-danger btn-block" style  ="margin-top:2%">Cancel</button>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</body>

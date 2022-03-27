@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href ="styles/style.css" rel ="stylesheet">
+		<link href ="css/bootstrap.min.css" rel ="stylesheet">
+		<script src ="js/jquery.min.js"></script>
+		<script src ="js/popper.min.js"></script>
+		<script src ="js/bootstrap.min.js"></script>
+		<title>Login Page</title>
+		<meta charset ="UTF-8" />
+	</head>
+	<body style ="background-color:rgb(88,90,56)">
+		<div class ="container">
+			<div class ="menu">
+				<ul class ="nav" style ="float:right">
+					<li class ="nav-item">
+						<a href ="#ghmodal" class ="btn btn-info" data-toggle ="modal" style ="margin-top:6px">Create Account
+						</a>
+					</li>
+					<li class ="nav-item">
+						<a href ="#ghmodal" class ="btn btn-danger" data-toggle ="modal" style ="margin-top:6px">Login
+						</a>
+					</li>
+				</ul>
+				<h6>Student Management System</h6>
+			</div>
+			<div class ="use">
+				<h5>User Login:</h5>
+			</div>
+			<div class ="row">
+				<div class ="col-3 bg-secondary text-white">
+					<center><h5>Description</h5></center>
+					<p>در ضمن شما می توانید کدهای تمرینی خودتان را نیز در همین قسمت 	وارد نمایید. توصیه من به که به تازگی شروع به برنامه نویسی کرده اند این.
+					در ضمن شما می توانید کدهای تمرینی خودتان را نیز در همین قسمت وارد نمایید. توصیه من به که به تازگی شروع به برنامه نویسی کرده اند این
+					</p>
+				</div>
+				<div class ="col-3 bg-success">
+					<center><h5>News</h5></center>
+					<p>در ضمن شما می توانید کدهای تمرینی خودتان را نیز در همین قسمت وارد نمایید. توصیه من به که به تازگی شروع به برنامه نویسی کرده اند این.در ضمن شما می توانید کدهای تمرینی خودتان را نیز در همین قسمت وارد نمایید. توصیه من به که به تازگی شروع به برنامه نویسی کرده اند این
+					</p>
+				</div>
+				<div class ="col-3 bg-secondary text-white">
+					<center><h5>letters</h5></center>
+					<p>در ضمن شما می توانید کدهای تمرینی خودتان را نیز در همین قسمت وارد نمایید. توصیه من به که به تازگی شروع به برنامه نویسی کرده اند این.
+					در ضمن شما می توانید کدهای تمرینی خودتان را نیز در همین قسمت وارد نمایید. توصیه من به که به تازگی شروع به برنامه نویسی کرده اند این
+					</p>
+				</div>
+			</div>
+			
+			<div class ="modal" id ="ghmodal">
+				<div class ="modal-dialog modal-dialog-centered">
+					<div class ="modal-content">
+						<div class ="modal-header">
+							<h5 class ="modal-title">Login</h5>
+							<button type ="button" class ="close" data-dismiss ="modal">&times;</button>
+						</div>
+						<div class ="modal-body" style ="margin-left:5%">
+							<form action ="harv" method ="POST" style ="width:300px">
+								<div class ="form-goup">
+									<label for ="ls">Your Account Type:</label>
+									<select class ="form-control" id ="ls" name ="typetxt">
+										<option value ="manager">Manager</option>
+										<option value ="teacher">Teacher</option>
+										<option value ="student">Student</option>
+									</select>
+								</div><br />
+								<div class ="form-group">
+									<label for ="us">User Name:</label>
+									<input type ="text" class ="form-control" name ="usertxt" id ="us">
+								</div>
+								<div class ="form-group">
+									<label for ="pas">Password:</label>
+									<input type ="password" class ="form-control" name ="passtxt" id ="pas">
+								</div>
+								<div class ="form-check">
+									<label class ="form-check-label">
+										<input type ="checkbox" class ="form-check-input">Remember Me
+									</label>
+								</div>
+								<button type ="submit" class ="btn btn-primary btn-block">Login</button>
+							</form>
+						</div>
+						<div class ="modal-footer">
+							<button type ="button" class ="btn btn-info" data-dismiss ="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
